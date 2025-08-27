@@ -1,0 +1,20 @@
+﻿@model IEnumerable<FlightClientApp.Models.Flight>
+
+<h2>Search Flights by Arrival City + Date</h2>
+
+<form method="get" class="row g-3">
+    <div class="col-md-4">
+        <input type="text" name="city" class="form-control" placeholder="Arrival City" />
+    </div>
+    <div class="col-md-3">
+        <input type="date" name="date" class="form-control" />
+    </div>
+    <div class="col-md-2">
+        <button class="btn btn-primary">Search</button>
+    </div>
+</form>
+
+@if (Model.Any())
+{
+    <partial name="_FlightTable" model="Model" />
+}

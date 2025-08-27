@@ -1,0 +1,17 @@
+﻿@model FlightClientApp.Models.Flight
+
+<h2>Search Flight by Number</h2>
+
+<form method="get" class="row g-3">
+    <div class="col-md-6">
+        <input type="text" name="flightNumber" class="form-control" placeholder="Enter flight number" />
+    </div>
+    <div class="col-md-2">
+        <button class="btn btn-primary">Search</button>
+    </div>
+</form>
+
+@if (Model != null)
+{
+    <partial name="_FlightTable" model="new List<FlightClientApp.Models.Flight> { Model }" />
+}

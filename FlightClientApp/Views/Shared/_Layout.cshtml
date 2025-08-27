@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Flight Client</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" asp-controller="Flights" asp-action="Index">Flight Info</a>
+            <div class="navbar-nav">
+                <a class="nav-link" asp-action="SearchByNumber" asp-controller="Flights">By Number</a>
+                <a class="nav-link" asp-action="SearchByDate" asp-controller="Flights">By Date</a>
+                <a class="nav-link" asp-action="SearchByDeparture" asp-controller="Flights">By Departure</a>
+                <a class="nav-link" asp-action="SearchByArrival" asp-controller="Flights">By Arrival</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

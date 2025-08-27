@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Search Flights";
+}
+
+
+<h2>Search Flights by Date</h2>
+
+
+<form asp-action="Search" method="post" class="row g-3">
+    <div class="col-auto">
+        <input type="date" name="date" class="form-control" required />
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</form>

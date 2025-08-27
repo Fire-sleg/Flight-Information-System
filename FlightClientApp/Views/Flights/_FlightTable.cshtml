@@ -1,0 +1,25 @@
+﻿@model IEnumerable<FlightClientApp.Models.Flight>
+
+<table class="table table-striped mt-4">
+    <thead class="table-dark">
+        <tr>
+            <th>Flight Number</th>
+            <th>Departure Time</th>
+            <th>Departure City</th>
+            <th>Arrival City</th>
+            <th>Duration (min)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var flight in Model)
+        {
+            <tr>
+                <td>@flight.FlightNumber</td>
+                <td>@flight.DepartureDateTime.ToString("g")</td>
+                <td>@flight.DepartureAirportCity</td>
+                <td>@flight.ArrivalAirportCity</td>
+                <td>@flight.DurationMinutes</td>
+            </tr>
+        }
+    </tbody>
+</table>
